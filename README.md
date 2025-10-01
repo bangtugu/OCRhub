@@ -21,12 +21,12 @@ npm start
 - **EasyOCR**
   - [GitHub](https://github.com/bangtugu/prweasyocr) 참조
 - **PaddleOCR**
-  - [GitHub](https://github.com/PaddlePaddle/PaddleOCR) 참조
+  - [GitHub](https://github.com/HJKim9810/paddle-back) 참조
 
 ```
 git clone https://github.com/bangtugu/pdfreader.git
 git clone https://github.com/bangtugu/prweasyocr.git
-git clone https://github.com/PaddlePaddle/PaddleOCR.git
+git clone https://github.com/HJKim9810/paddle-back.git
 ```
 
 ------

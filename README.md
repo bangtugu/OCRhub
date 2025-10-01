@@ -90,4 +90,4 @@ GPU를 사용할 경우 각 OCR에 대한 라이브러리 등 설정을 용이�
 
 **통합버전**
 
-- [GitHub](https://github.com/HJKim9810/paddle-back) 참조
+- [GitHub](https://github.com/Yeji0724/-pdfOcr.git) 참조

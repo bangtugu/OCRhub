@@ -1,0 +1,192 @@
+html, body, #root, .App {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: #282c34;
+  color: white;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+}
+
+.App-header {
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+select,
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+select {
+  background-color: #3f444c;
+  color: white;
+}
+
+button {
+  background-color: #61dafb;
+  color: #282c34;
+  font-weight: bold;
+}
+
+button:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+}
+
+.drop-zone {
+  border: 2px dashed #61dafb;
+  border-radius: 10px;
+  width: 90%;               /* 전체 폭 기준 */
+  max-width: 600px;         /* 최대 폭 제한 */
+  height: 120px;
+  display: flex;
+  align-items: center;      /* 세로 중앙 */
+  justify-content: center;  /* 가로 중앙 */
+  cursor: pointer;
+  margin: 10px auto;        /* 좌우 중앙 정렬 */
+  position: relative;
+  text-align: center;
+  flex-shrink: 0;
+  overflow: hidden;         /* 긴 텍스트가 튀어나오는 것 방지 */
+  padding: 0 10px;          /* 약간 패딩 */
+  box-sizing: border-box;
+}
+
+
+.drop-zone.drag-over {
+  background-color: rgba(97,218,251,0.2);
+}
+
+.file-list {
+  margin-top: 10px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.file-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.file-list li {
+  margin-bottom: 3px;
+}
+
+.file-item.not-extracted {
+  color: gray;
+  cursor: default;
+}
+
+.file-item.extracted {
+  color: #61dafb;
+  cursor: pointer;
+}
+
+.file-item.extracted:hover {
+  text-decoration: underline;
+}
+
+.file-item.other-engine {
+  color: #4caf50;
+  cursor: pointer;
+}
+
+.file-item.other-engine:hover {
+  text-decoration: underline;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: red;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.navigation {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.results {
+  margin-top: 30px;
+  width: 90%;
+  max-width: 800px;
+}
+
+.result-box {
+  background-color: #1a1e24;
+  border: 1px solid #444;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: left;
+  position: relative;
+}
+
+.filename {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #61dafb;
+}
+
+.text-content {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-height: 500px;
+  overflow-y: auto;
+  background-color: #333;
+  padding: 15px;
+  border-radius: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9em;
+  color: #f0f0f0;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 5px 10px;
+  font-size: 0.8em;
+}
+
+.toast {
+  position: fixed;
+  transform: translate(-50%, -100%);
+  background: #0c0c0c;
+  color: #ffffff;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  pointer-events: none;
+  opacity: 0;
+  animation: toast-anim 2s forwards;
+}
+
+@keyframes toast-anim {
+  0% { opacity: 0; transform: translate(-50%, 0); }
+  10% { opacity: 1; transform: translate(-50%, -20px); }
+  90% { opacity: 1; transform: translate(-50%, -20px); }
+  100% { opacity: 0; transform: translate(-50%, -40px); }
+}
